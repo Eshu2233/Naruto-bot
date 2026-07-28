@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "uid": { "enable": true },
+    "admin": { "enable": true },
+    "bhabhi": { "enable": true },
+    "emojireply": { "enable": true },
+    "ffinfo": { "enable": true },
+    "gc": { "enable": true },
+    "help": { "enable": true },
+    "murgi": { "enable": true },
+    "ownermention": { "enable": true },
+    "say": { "enable": true }
+  }
+}
