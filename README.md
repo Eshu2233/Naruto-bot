@@ -57,11 +57,11 @@
 
 ---
 
-## 🚀 Quick Setup Guide
+## 🚀 Quick Setup Guide 🎀✨
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/EMON-ISLAM/NARUTO-BOT-V3.git](https://github.com/EMON-ISLAM/NARUTO-BOT-V3.git)
+git clone https://github.com/Eshu2233/Naruto-bot.git
 
 # 2. Enter project directory
 cd NARUTO-BOT-V3
