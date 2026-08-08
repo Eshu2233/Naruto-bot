@@ -1,1 +1,76 @@
- 
+<%~ includeFile("partials/header.eta", {
+	user: user
+}); %>
+<%~ includeFile("partials/message.eta"); %>
+<%~ includeFile("partials/title.eta", {
+	icon: "fa-solid fa-hand-holding-dollar",
+	title: "Donate"
+}); %>
+
+<div class="container">
+  <div class="row mt-5">
+    
+    <!-- Bkash Payment Card -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-primary">
+        <div class="card-header bg-primary text-white">
+          <h5 class="card-title mb-0"><i class="fa-solid fa-mobile-screen-button me-2"></i>bKash</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text mb-1">
+            <strong>Number:</strong> 01771107650
+          </p>
+          <p class="card-text mb-1">
+            <strong>Account Type:</strong> Personal
+          </p>
+          <p class="card-text">
+            <strong>Owner:</strong> EMON ISLAM
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nagad Payment Card -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-danger">
+        <div class="card-header bg-danger text-white">
+          <h5 class="card-title mb-0"><i class="fa-solid fa-wallet me-2"></i>Nagad</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text mb-1">
+            <strong>Number:</strong> 01771107650
+          </p>
+          <p class="card-text mb-1">
+            <strong>Account Type:</strong> Personal
+          </p>
+          <p class="card-text">
+            <strong>Owner:</strong> EMON ISLAM
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rocket / Bank Card -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-warning">
+        <div class="card-header bg-warning text-dark">
+          <h5 class="card-title mb-0"><i class="fa-solid fa-building-columns me-2"></i>Rocket / Bank</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text mb-1">
+            <strong>Number:</strong> 01771107650
+          </p>
+          <p class="card-text mb-1">
+            <strong>Account Type:</strong> Personal
+          </p>
+          <p class="card-text">
+            <strong>Owner:</strong> EMON ISLAM
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%~ includeFile("partials/footer.eta") %>
