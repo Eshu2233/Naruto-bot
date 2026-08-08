@@ -1,1 +1,84 @@
- 
+<%~ includeFile("partials/header.eta", {
+	user: user
+}) %>
+<%~ includeFile("partials/message.eta") %>
+<%~ includeFile("partials/title.eta", {
+	icon: "fas fa-home",
+	title: "Home"
+}); %>
+
+<div class="text-center mt-4">
+  <h1 class="fw-bold">Welcome to <span class="text-primary">EMON ISLAM</span> Bot Dashboard!</h1>
+  <p class="text-muted fs-5">Manage and customize your Facebook messenger bot easily.</p>
+</div>
+
+<ul class="text-center d-flex justify-content-center gap-4 list-unstyled my-3">
+	<li class="badge bg-primary fs-6 p-2"><i class="fas fa-user-shield me-1"></i> Moderation</li>
+	<li class="badge bg-secondary fs-6 p-2"><i class="fas fa-terminal me-1"></i> Custom Commands</li>
+  <li class="badge bg-success fs-6 p-2"><i class="fas fa-chart-line me-1"></i> Level & Rank System</li>
+</ul>
+
+<div class="text-center mb-4">
+<% if (global.botID) { %>
+	<button class="btn btn-phoenix-primary rounded-5 px-4 py-2" id="addme">
+		<i class="fab fa-facebook-messenger me-2"></i>Add Bot to Your Group
+	</button>
+<% } else { %>
+	<button class="btn btn-phoenix-danger rounded-5 px-4 py-2">
+		<i class="fas fa-exclamation-circle me-2"></i>Bot is currently offline
+	</button>
+<% } %>
+</div>
+
+<hr class="my-4">
+
+<!-- Sections linking to /dashboard -->
+<div class="row g-4 my-2">
+  <div class="col-md-6" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+    <div class="card h-100 shadow-sm border-0 bg-light p-3">
+      <h3 class="h4 text-primary"><i class="fas fa-sliders-h me-2"></i>Easy to Manage</h3>
+      <p class="mb-0 text-secondary">Customize welcome messages, leave messages, rankups, and group settings with our intuitive and user-friendly control panel.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+    <div class="card h-100 shadow-sm border-0 bg-light p-3">
+      <h3 class="h4 text-primary"><i class="fas fa-hand-holding-heart me-2"></i>Welcome Messages</h3>
+      <p class="mb-0 text-secondary">Greet new members automatically with custom text and attachments to inform them about your group rules and ongoing events.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+    <div class="card h-100 shadow-sm border-0 bg-light p-3">
+      <h3 class="h4 text-primary"><i class="fas fa-code me-2"></i>Custom Commands</h3>
+      <p class="mb-0 text-secondary">Create and trigger your own custom auto-responder commands directly from the dashboard easily.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6" onclick="window.location.href='/dashboard'" style="cursor: pointer;">
+    <div class="card h-100 shadow-sm border-0 bg-light p-3">
+      <h3 class="h4 text-primary"><i class="fas fa-trophy me-2"></i>Level & Rank System</h3>
+      <p class="mb-0 text-secondary">Reward active group members with an automated level-up system based on their message activity.</p>
+    </div>
+  </div>
+</div>
+
+<section class="py-4 my-3 rounded-3 bg-phoenix-primary text-center">
+	<div class="container">
+		<h3 class="mb-2"><i class="fas fa-chart-pie me-2"></i>Bot Usage Statistics</h3>
+		<p class="fs-5 mb-0">Currently added to <b><%=global.db.allThreadData.length%> chat groups</b> and serving <b><%=global.db.allUserData.length%> active users</b>.</p>
+	</div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    const btn = $('#addme');
+		if (btn.length > 0) {
+			btn.on("click", () => {
+				window.open("https://www.facebook.com/" + "<%= global.botID %>", "_blank");
+			});
+		}
+  })();
+</script>
+
+<%~ includeFile('partials/footer.eta') %> 
